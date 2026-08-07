@@ -81,8 +81,7 @@ The detected skills can then be used for further career analysis.
        ↓
 🚀 Career Recommendations
 
-
-🔮 Future Improvements
+# 🔮 Future Improvements
 
 Planned improvements include:
 
@@ -105,7 +104,7 @@ Planned improvements include:
 ☁️ Cloud deployment
 🗄️ Production database integration
 
-🎯 Project Goal
+# 🎯 Project Goal
 
 The long-term goal of TALENTLENS is to help candidates understand their current skills and make better decisions about their career preparation.
 
@@ -122,7 +121,8 @@ The overall idea is:
 📚 What should I improve?
         ↓
 🎯 Am I ready for an interview?
-🌐 Future Scope
+
+# 🌐 Future Scope
 
 TALENTLENS can be expanded into a complete career intelligence platform by integrating more advanced Artificial Intelligence, Natural Language Processing, and Machine Learning techniques.
 
@@ -139,7 +139,8 @@ Potential future capabilities include:
 📊 Candidate dashboards
 ☁️ Cloud-based deployment
 ⚡ Real-time career insights
-👨‍💻 Developer
+
+# 👨‍💻 Developer
 M Hemanth Surya Prasad
 
 Cyber Security Analyst | Full-Stack Engineer
