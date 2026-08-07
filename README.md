@@ -1,3 +1,25 @@
+## 📸 Screenshots
+
+### 🏠 Home Page
+![TalentLens Home Page](screenshots/HOME%20PAGE.jpeg)
+
+### 🎯 Career Skill Analysis
+![Career Skill Analysis](screenshots/CAREER%20SKILL%20ANALYSIS.jpeg)
+
+### 📄 Resume Analysis
+![Resume Analysis](screenshots/RESUME%20ANALYSIS.jpeg)
+
+### 🔍 Resume Content Extraction
+![Resume Content Extraction](screenshots/ANALYSING%20AND%20EXTRACTING%20RESUME%20CONTENT.jpg)
+
+### 👤 Profile Skill Recommendations
+![Profile Skill Recommendations](screenshots/PROFILE%20SKILL%20RECOMMENDATIONS.jpeg)
+
+### 🎤 Skill Interview
+![Skill Interview](screenshots/SKILL%20INTERVIEW.jpg)
+
+### 📊 Interview Analysis
+![Interview Analysis](screenshots/INTERVIEW%20ANALYSIS.jpg)
 ## ⚙️ How It Works
 
 ### 🎯 Skill Analysis
