@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>TALENTLENS | Career Intelligence</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #0b1020;
+
+    color: white;
+}
+
+.container {
+
+    max-width: 1000px;
+
+    margin: 50px auto;
+
+    padding: 30px;
+}
+
+.brand {
+
+    text-align: center;
+
+    font-size: 46px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.subtitle {
+
+    text-align: center;
+
+    color: #aeb7d0;
+
+    margin-top: 10px;
+
+    margin-bottom: 35px;
+}
+
+.card {
+
+    background: #151c32;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+}
+
+.role {
+
+    text-align: center;
+
+    color: #aeb7d0;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.score-card {
+
+    text-align: center;
+
+    background: #202943;
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    margin-top: 20px;
+}
+
+.score {
+
+    font-size: 80px;
+
+    font-weight: bold;
+
+    margin: 10px 0;
+}
+
+.message {
+
+    color: #b8e7c1;
+
+    font-size: 17px;
+}
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.skill-card {
+
+    background: #151c32;
+
+    border-radius: 20px;
+
+    padding: 30px;
+}
+
+.skill {
+
+    background: #202943;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    margin: 10px 0;
+}
+
+.matched-title {
+
+    color: #b8e7c1;
+}
+
+.missing-title {
+
+    color: #ffd3a6;
+}
+
+.recommendation {
+
+    background: #202943;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin: 12px 0;
+
+    line-height: 1.5;
+}
+
+.button {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #0b1020;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+
+    .grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+
+        padding: 15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <div class="brand">
+        TALENTLENS
+    </div>
+
+
+    <div class="subtitle">
+        AI-Powered Career Intelligence
+    </div>
+
+
+    <!-- TARGET ROLE -->
+
+    <div class="card">
+
+        <div class="role">
+            Target Role
+        </div>
+
+        <h1 style="text-align:center;">
+            {{ target_role }}
+        </h1>
+
+    </div>
+
+
+    <!-- SCORE -->
+
+    <div class="card">
+
+        <div class="score-card">
+
+            <div class="role">
+                Career Readiness Score
+            </div>
+
+
+            <div class="score">
+                {{ score }}%
+            </div>
+
+
+            <div class="message">
+
+                {% if score >= 80 %}
+
+                    🚀 Excellent alignment. Your profile is highly
+                    compatible with this role.
+
+                {% elif score >= 60 %}
+
+                    🔥 Strong foundation. A few skill improvements
+                    can significantly increase your readiness.
+
+                {% elif score >= 40 %}
+
+                    📈 Moderate readiness. Focus on the identified
+                    skill gaps to strengthen your profile.
+
+                {% else %}
+
+                    🎯 Your journey is still developing.
+                    Follow the recommended learning path.
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MATCHED + MISSING -->
+
+    <div class="grid">
+
+
+        <div class="skill-card">
+
+            <h2 class="matched-title">
+                ✅ Matched Skills
+            </h2>
+
+
+            {% if matched %}
+
+                {% for skill in matched %}
+
+                    <div class="skill">
+                        ✓ {{ skill }}
+                    </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <p>
+                    No matching skills detected.
+                </p>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h2 class="missing-title">
+                ⚠️ Priority Skill Gaps
+            </h2>
+
+
+            {% if missing %}
+
+                {% for skill in missing %}
+
+                    <div class="skill">
+                        + {{ skill }}
+                    </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <p>
+                    🎉 No major skill gaps detected!
+                </p>
+
+            {% endif %}
+
+        </div>
+
+
+    </div>
+
+
+    <!-- RECOMMENDATIONS -->
+
+    <div class="card">
+
+        <h2>
+            🧭 TALENTLENS Learning Recommendations
+        </h2>
+
+
+        <p style="color:#aeb7d0;">
+
+            Based on your detected resume skills and
+            target role, TALENTLENS recommends focusing
+            on the following areas:
+
+        </p>
+
+
+        {% if recommendations %}
+
+            {% for recommendation in recommendations %}
+
+                <div class="recommendation">
+
+                    🎯 {{ recommendation }}
+
+                </div>
+
+            {% endfor %}
+
+        {% else %}
+
+            <div class="recommendation">
+
+                🚀 Your skill profile is already strongly
+                aligned with this role.
+
+            </div>
+
+        {% endif %}
+
+
+    </div>
+
+
+    <!-- ACTIONS -->
+
+    <div
+        class="card"
+        style="text-align:center;"
+    >
+
+        <h2>
+            Want to analyze another resume?
+        </h2>
+
+
+        <a
+            href="/resume"
+            class="button"
+        >
+            ← Upload Another Resume
+        </a>
+
+
+        <a
+            href="/"
+            class="button"
+        >
+            Back to TALENTLENS
+        </a>
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>

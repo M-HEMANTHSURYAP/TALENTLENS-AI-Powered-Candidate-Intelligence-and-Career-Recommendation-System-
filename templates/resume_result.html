@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TALENTLENS | Resume Intelligence</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1020;
+            color: white;
+        }
+
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 30px;
+        }
+
+
+        /* BRAND */
+
+        .brand {
+            text-align: center;
+            font-size: 46px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+
+        .subtitle {
+            text-align: center;
+            color: #aeb7d0;
+            margin-top: 10px;
+            margin-bottom: 35px;
+        }
+
+
+        /* CARD */
+
+        .card {
+            background: #151c32;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+
+        /* SUCCESS */
+
+        .success {
+            text-align: center;
+            padding: 22px;
+            background: #202943;
+            border-radius: 12px;
+        }
+
+
+        .success h2 {
+            margin-top: 0;
+        }
+
+
+        .success p {
+            color: #b8e7c1;
+            margin-bottom: 0;
+        }
+
+
+        /* SKILLS */
+
+        .skills-card {
+            background: #151c32;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+
+        .skills-card h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+
+        .skill-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+
+        .skill {
+            background: #202943;
+            border: 1px solid #394463;
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+        }
+
+
+        .skill:hover {
+            transform: translateY(-2px);
+        }
+
+
+        .no-skills {
+            color: #aeb7d0;
+            font-style: italic;
+        }
+
+
+        /* RESUME CONTENT */
+
+        .resume-card {
+            background: #151c32;
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+
+        .resume-card h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+
+        .resume-text {
+            background: #0f1629;
+            border-radius: 12px;
+            padding: 25px;
+            white-space: pre-wrap;
+            line-height: 1.7;
+            color: #d4daea;
+            max-height: 600px;
+            overflow-y: auto;
+            border: 1px solid #202943;
+        }
+
+
+        /* BUTTON */
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+
+        .back {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 10px;
+            background: white;
+            color: #0b1020;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        .back:hover {
+            transform: scale(1.02);
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .container {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .brand {
+                font-size: 36px;
+            }
+
+            .card,
+            .skills-card,
+            .resume-card {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- BRAND -->
+
+    <div class="brand">
+        TALENTLENS
+    </div>
+
+
+    <div class="subtitle">
+        Resume Intelligence Engine
+    </div>
+
+
+
+    <!-- SUCCESS CARD -->
+
+    <div class="card">
+
+        <div class="success">
+
+            <h2>
+                ✅ Resume Processed Successfully
+            </h2>
+
+            <p>
+                TALENTLENS extracted your resume
+                and analyzed your technical profile.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- DETECTED SKILLS -->
+
+    <div class="skills-card">
+
+        <h2>
+            🧠 Skills Detected by TALENTLENS
+        </h2>
+
+
+        {% if detected_skills %}
+
+            <div class="skill-container">
+
+                {% for skill in detected_skills %}
+
+                    <div class="skill">
+                        ✓ {{ skill }}
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        {% else %}
+
+            <p class="no-skills">
+                No recognized technical skills
+                were detected in this resume.
+            </p>
+
+        {% endif %}
+
+    </div>
+
+
+
+    <!-- EXTRACTED RESUME -->
+
+    <div class="resume-card">
+
+        <h2>
+            📄 Extracted Resume Content
+        </h2>
+
+
+        <div class="resume-text">
+
+{{ resume_text }}
+
+        </div>
+
+
+        <div class="button-container">
+
+            <a href="/resume" class="back">
+                ← Upload Another Resume
+            </a>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>

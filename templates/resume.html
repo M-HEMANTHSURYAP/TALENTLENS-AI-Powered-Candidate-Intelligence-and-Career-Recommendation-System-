@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TALENTLENS | Resume Intelligence</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1020;
+            color: white;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 70px auto;
+            padding: 30px;
+        }
+
+        .brand {
+            text-align: center;
+            font-size: 46px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #aeb7d0;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: #151c32;
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .upload-box {
+            border: 2px dashed #3b4665;
+            border-radius: 15px;
+            padding: 50px 25px;
+            text-align: center;
+        }
+
+        .upload-box h2 {
+            margin-top: 0;
+        }
+
+        .upload-box p {
+            color: #aeb7d0;
+            margin-bottom: 30px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 15px;
+            background: #202943;
+            color: white;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            color: #0b1020;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            transform: scale(1.01);
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            color: #aeb7d0;
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <div class="brand">
+        TALENTLENS
+    </div>
+
+    <div class="subtitle">
+        AI-Powered Resume Intelligence
+    </div>
+
+
+    <div class="card">
+
+        <form action="/resume"
+              method="POST"
+              enctype="multipart/form-data">
+
+            <div class="upload-box">
+
+                <h2>
+                    📄 Upload Your Resume
+                </h2>
+
+                <p>
+                    Upload your PDF resume and let TALENTLENS
+                    extract your professional information.
+                </p>
+
+                <input
+                    type="file"
+                    name="resume"
+                    accept=".pdf"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="button">
+                    ANALYZE RESUME
+                </button>
+
+            </div>
+
+        </form>
+
+
+        <a href="/" class="back">
+            ← Back to TALENTLENS
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TALENTLENS | Career Analysis</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1020;
+            color: white;
+        }
+
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 30px;
+        }
+
+
+        /* =========================
+           BRAND
+        ========================= */
+
+        .brand {
+            text-align: center;
+            font-size: 46px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+
+        .subtitle {
+            text-align: center;
+            color: #aeb7d0;
+            font-size: 17px;
+            margin-bottom: 40px;
+        }
+
+
+        /* =========================
+           PROFILE
+        ========================= */
+
+        .profile-card {
+            background: #151c32;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+
+        .profile-card h2 {
+            margin-top: 0;
+        }
+
+
+        .profile-item {
+            margin: 18px 0;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #303954;
+        }
+
+
+        .label {
+            color: #8f9bb8;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+
+        .value {
+            margin-top: 7px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           SCORE
+        ========================= */
+
+        .score-card {
+            background: #151c32;
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+
+        .score-title {
+            color: #aeb7d0;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+
+        .score {
+            font-size: 75px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+
+        .score-message {
+            color: #aeb7d0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           SKILL SECTIONS
+        ========================= */
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+
+        .skill-card {
+            background: #151c32;
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+
+        .skill-card h2 {
+            margin-top: 0;
+        }
+
+
+        .skill {
+            background: #202943;
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+
+        .matched-title {
+            color: #b8e7c1;
+        }
+
+
+        .missing-title {
+            color: #ffd3a6;
+        }
+
+
+        .empty {
+            color: #929db7;
+            font-style: italic;
+        }
+
+
+        /* =========================
+           RECOMMENDATIONS
+        ========================= */
+
+        .next-step {
+            margin-top: 25px;
+            background: #151c32;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+
+        .next-step h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+
+        .next-step > p {
+            color: #aeb7d0;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+
+        .recommendation {
+            background: #202943;
+            padding: 22px;
+            border-radius: 14px;
+            margin-top: 15px;
+            border: 1px solid #303954;
+        }
+
+
+        .recommendation h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+
+        .recommendation p {
+            color: #c1c9dc;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+
+        .priority {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: #303b5c;
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+
+        .recommendation strong {
+            color: white;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+
+        .back-button {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 10px;
+            background: white;
+            color: #0b1020;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        .back-button:hover {
+            transform: scale(1.02);
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .section-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .container {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+
+            .brand {
+                font-size: 36px;
+            }
+
+
+            .score {
+                font-size: 60px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- =========================
+         BRAND
+    ========================= -->
+
+    <div class="brand">
+        TALENTLENS
+    </div>
+
+
+    <div class="subtitle">
+        AI-Powered Candidate Intelligence & Career Recommendation System
+    </div>
+
+
+
+    <!-- =========================
+         CANDIDATE PROFILE
+    ========================= -->
+
+    <div class="profile-card">
+
+        <h2>
+            Candidate Profile
+        </h2>
+
+
+        <div class="profile-item">
+
+            <div class="label">
+                Candidate
+            </div>
+
+            <div class="value">
+                {{ name }}
+            </div>
+
+        </div>
+
+
+        <div class="profile-item">
+
+            <div class="label">
+                Target Role
+            </div>
+
+            <div class="value">
+                {{ target_role }}
+            </div>
+
+        </div>
+
+
+        <div class="profile-item">
+
+            <div class="label">
+                Current Skills
+            </div>
+
+            <div class="value">
+                {{ skills }}
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         READINESS SCORE
+    ========================= -->
+
+    <div class="score-card">
+
+        <div class="score-title">
+            Career Readiness Score
+        </div>
+
+
+        <div class="score">
+            {{ score }}%
+        </div>
+
+
+        <div class="score-message">
+
+            {% if score >= 80 %}
+
+                Excellent role alignment.
+                You are highly prepared for this position.
+
+            {% elif score >= 60 %}
+
+                Good foundation.
+                A few important skills can improve your readiness.
+
+            {% elif score >= 40 %}
+
+                Moderate readiness.
+                Focus on the identified skill gaps.
+
+            {% else %}
+
+                Early-stage readiness.
+                Follow the recommended learning path to improve.
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         SKILL ANALYSIS
+    ========================= -->
+
+    <div class="section-grid">
+
+
+        <!-- MATCHED SKILLS -->
+
+        <div class="skill-card">
+
+            <h2 class="matched-title">
+                ✅ Matched Skills
+            </h2>
+
+
+            {% if matched %}
+
+                {% for skill in matched %}
+
+                    <div class="skill">
+                        ✓ {{ skill }}
+                    </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <p class="empty">
+                    No matching skills detected yet.
+                </p>
+
+            {% endif %}
+
+        </div>
+
+
+
+        <!-- MISSING SKILLS -->
+
+        <div class="skill-card">
+
+            <h2 class="missing-title">
+                ⚠️ Priority Skill Gaps
+            </h2>
+
+
+            {% if missing %}
+
+                {% for skill in missing %}
+
+                    <div class="skill">
+                        + {{ skill }}
+                    </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <p class="empty">
+                    Excellent! No major skill gaps detected.
+                </p>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         CAREER RECOMMENDATIONS
+    ========================= -->
+
+    <div class="next-step">
+
+
+        <h2>
+            🎯 TALENTLENS Career Recommendations
+        </h2>
+
+
+        <p>
+            Based on your current skills and target role,
+            TALENTLENS has identified areas that can improve
+            your career readiness.
+        </p>
+
+
+        {% if recommendations %}
+
+
+            {% for recommendation in recommendations %}
+
+
+                <div class="recommendation">
+
+
+                    <h3>
+                        {{ loop.index }}.
+                        {{ recommendation.skill }}
+                    </h3>
+
+
+                    <p>
+
+                        <strong>Priority:</strong>
+
+                        <span class="priority">
+                            {{ recommendation.priority }}
+                        </span>
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Why this matters:</strong>
+
+                        {{ recommendation.reason }}
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Recommended Action:</strong>
+
+                        {{ recommendation.action }}
+
+                    </p>
+
+
+                </div>
+
+
+            {% endfor %}
+
+
+        {% else %}
+
+
+            <p>
+                🎉 Excellent!
+                Your profile currently matches all the
+                major skills for this role.
+            </p>
+
+
+        {% endif %}
+
+
+
+        <!-- BUTTON -->
+
+        <div class="button-container">
+
+            <a href="/analysis" class="back-button">
+                Analyze Another Profile
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
