@@ -80,3 +80,70 @@ The detected skills can then be used for further career analysis.
 📊 Skill Gap Identification
        ↓
 🚀 Career Recommendations
+
+
+🔮 Future Improvements
+
+Planned improvements include:
+
+🤖 More advanced resume analysis
+🔍 Improved skill extraction
+💼 More career roles
+🧠 Larger interview question banks
+💬 More detailed answer evaluation
+🎯 Better career recommendations
+🎨 Improved UI/UX
+📊 More detailed candidate analytics
+🤖 AI/ML-based candidate evaluation
+🎙️ Voice-based interview simulation
+📚 Personalized learning paths
+💼 Job recommendation systems
+📄 Resume scoring
+🔗 Job description and resume matching
+🔐 User authentication
+👤 User profiles and dashboards
+☁️ Cloud deployment
+🗄️ Production database integration
+
+🎯 Project Goal
+
+The long-term goal of TALENTLENS is to help candidates understand their current skills and make better decisions about their career preparation.
+
+The overall idea is:
+
+🔎 Where am I now?
+        ↓
+🛠️ What skills do I have?
+        ↓
+❌ What skills am I missing?
+        ↓
+💼 Which career fits my skills?
+        ↓
+📚 What should I improve?
+        ↓
+🎯 Am I ready for an interview?
+🌐 Future Scope
+
+TALENTLENS can be expanded into a complete career intelligence platform by integrating more advanced Artificial Intelligence, Natural Language Processing, and Machine Learning techniques.
+
+Potential future capabilities include:
+
+🤖 AI-based resume analysis
+🧠 Natural Language Processing
+📈 Machine Learning-based career prediction
+💬 Advanced interview evaluation
+🎙️ Voice-based interview simulation
+📚 Personalized learning recommendations
+💼 Job recommendation systems
+🔗 Job description and resume matching
+📊 Candidate dashboards
+☁️ Cloud-based deployment
+⚡ Real-time career insights
+👨‍💻 Developer
+M Hemanth Surya Prasad
+
+Cyber Security Analyst | Full-Stack Engineer
+
+TALENTLENS was designed and developed as a project focused on combining software development, candidate analysis, resume intelligence, career guidance, and technical interview evaluation into one platform.
+
+
